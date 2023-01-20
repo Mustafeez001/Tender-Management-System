@@ -27,49 +27,5 @@ The Role of a Vendor is:
 4. View his own Bid History.
 
 
-
-
-SQL Tables
-
-
-create table administrator
-(
-username varchar(20),
-password varchar(20)
-);
-
-create table Tender
-(
-
-tid int primary key,
-flatType int,
-location varchar(20),
-startDate varchar(20),
-enddate varchar(20),
-basePrice double
-);
-
-create table Vendor
-(
-
-vid int primary key auto_increment,
-vname varchar(20),
-email varchar(20),
-password varchar (20),
-company varchar(20),
-address varchar(20)
-
-);
-
-
-create table bid
-(
-tid int,
-vid int primary key,
-offer int,
-foreign key(vid) references vendor(vid)
-);
-
-
-![logo](![ErDiagram](https://user-images.githubusercontent.com/105917441/213757207-ea8b36b7-3c88-4f68-8763-66d65d8131d6.png)
+![logo](![2023-01-20 (2)](https://user-images.githubusercontent.com/105917441/213762229-eb097981-27f5-41f7-bd0d-de260baf0775.png)
 )
