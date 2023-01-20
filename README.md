@@ -25,3 +25,50 @@ The Role of a Vendor is:
 2. Place a Bid against a Tender.
 3. View status of a Bid(Whether Selected or Not)
 4. View his own Bid History.
+
+
+
+
+SQL Tables
+
+
+create table administrator
+(
+username varchar(20),
+password varchar(20)
+);
+
+create table Tender
+(
+
+tid int primary key,
+flatType int,
+location varchar(20),
+startDate varchar(20),
+enddate varchar(20),
+basePrice double
+);
+
+create table Vendor
+(
+
+vid int primary key auto_increment,
+vname varchar(20),
+email varchar(20),
+password varchar (20),
+company varchar(20),
+address varchar(20)
+
+);
+
+
+create table bid
+(
+tid int,
+vid int primary key,
+offer int,
+foreign key(vid) references vendor(vid)
+);
+
+
+
