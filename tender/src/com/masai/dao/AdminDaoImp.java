@@ -17,7 +17,7 @@ import com.masai.utility.DBUtil;
 
 public class AdminDaoImp implements AdminDao{
 
-//==============================                           ==VENDOR REGISTRATION--------------------------------------------------------------
+//==============================  ==VENDOR REGISTRATION--------------------------------------------------------------
 	@Override
 	public String registerVendor(Vendor vendor) {
 		String message="Not Registered..";
