@@ -132,16 +132,16 @@ public class useCase {
 							
 							int tid = sc.nextInt();
 							
-							System.out.println("Enter Units Type in Quantity");
+							System.out.println(ConsoleColors.ORANGE+"Enter Units Type in Quantity"+ConsoleColors.RESET);
 							int fType = sc.nextInt();
 							
-							System.out.println("Enter tender location");;
+							System.out.println(ConsoleColors.ORANGE+"Enter tender location"+ConsoleColors.RESET);;
 							String l = sc.next();
-							System.out.println("Enter tender start date in yyyy-mm-dd");
+							System.out.println(ConsoleColors.ORANGE+"Enter tender start date in yyyy-mm-dd"+ConsoleColors.RESET);
 							String sdate = sc.next();
-							System.out.println("Enter tender end date in yyyy-mm-dd");
+							System.out.println(ConsoleColors.ORANGE+"Enter tender end date in yyyy-mm-dd"+ConsoleColors.RESET);
 							String edate = sc.next();
-							System.out.println("Enter base price");
+							System.out.println(ConsoleColors.ORANGE+"Enter base price"+ConsoleColors.RESET);
 							double price = sc.nextDouble();
 							Tender tender = new Tender(tid, fType, l, sdate, edate, price);
 							AdminDao ad = new AdminDaoImp();
@@ -166,6 +166,8 @@ public class useCase {
 	                          System.out.println("Tender start date : "+t.getStartDate());
 	                          System.out.println("Tender end date : "+t.getEndDate());
 	                          System.out.println("Tender base price : "+t.getBasePrice());
+	                          System.out.println(" ");
+	                          
 	                          System.out.println(ConsoleColors.YELLOW_BACKGROUND_BRIGHT+" ⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼⁼"+ConsoleColors.RESET);	
 	                          
 							});
@@ -178,7 +180,7 @@ public class useCase {
 						case 5:
 							
 						    AdminDao a = new AdminDaoImp();
-							System.out.println("Enter tender id to see all bids");
+							System.out.println(ConsoleColors.RESET+"Enter tender id to see all bids"+ConsoleColors.RESET);
 							int t= sc.nextInt();
 							a.viewBid(t);
 							System.out.println(ConsoleColors.RED_BACKGROUND+"=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷=̷"+ConsoleColors.RESET);
@@ -187,7 +189,7 @@ public class useCase {
 						case 6:
 							
 							AdminDao ab = new AdminDaoImp();
-							System.out.println("Enter tender id ..");
+							System.out.println(ConsoleColors.RESET+"Enter tender id .."+ConsoleColors.RESET);
 							int ti = sc.nextInt();
 							String res = ab.assignTender(ti);
 							System.out.println(res);
@@ -213,9 +215,9 @@ public class useCase {
 			}
 			
 		}else if(x==2) {
-			System.out.println("Please enter your email..");
+			System.out.println(ConsoleColors.ORANGE+"Please enter your email.."+ConsoleColors.RESET);
 			String email = sc.next();
-			System.out.println("Enter your password");
+			System.out.println(ConsoleColors.ORANGE+"Enter your password");
 			String pass = sc.next();
 			boolean flag=true;
 			boolean b;
