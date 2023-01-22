@@ -27,5 +27,51 @@ The Role of a Vendor is:
 4. View his own Bid History.
 
 
+SQL TABLES
+
+
+mysql> desc administrator;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(20) | YES  |     | NULL    |       |
+| password | varchar(20) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+mysql> desc vendor;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| vid      | int         | NO   | PRI | NULL    | auto_increment |
+| vname    | varchar(20) | YES  |     | NULL    |                |
+| email    | varchar(20) | YES  |     | NULL    |                |
+| password | varchar(20) | YES  |     | NULL    |                |
+| company  | varchar(20) | YES  |     | NULL    |                |
+| address  | varchar(20) | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+
+mysql> desc tender;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| tid       | int         | NO   | PRI | NULL    |       |
+| flatType  | int         | YES  |     | NULL    |       |
+| location  | varchar(20) | YES  |     | NULL    |       |
+| startDate | varchar(20) | YES  |     | NULL    |       |
+| enddate   | varchar(20) | YES  |     | NULL    |       |
+| basePrice | double      | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+
+mysql> desc bid;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| tid   | int  | YES  |     | NULL    |       |
+| vid   | int  | NO   | PRI | NULL    |       |
+| offer | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+
+
+
 ![logo](![2023-01-20 (2)](https://user-images.githubusercontent.com/105917441/213762229-eb097981-27f5-41f7-bd0d-de260baf0775.png)
 )
